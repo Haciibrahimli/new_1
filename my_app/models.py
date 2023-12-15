@@ -21,6 +21,7 @@ class About(models.Model):
     description = models.TextField(verbose_name='movzu')
     image = models.ImageField(upload_to='media/',null=True,blank=True)
 
+
     def __str__(self):
         return self.name
     
@@ -28,6 +29,8 @@ class About(models.Model):
 
         verbose_name = 'haqqinda'
         verbose_name_plural = 'haqqinda'
+
+
 
 class Experience(models.Model):
     position = models.CharField(max_length=255,verbose_name='pesesi')
@@ -42,6 +45,7 @@ class Experience(models.Model):
 
         verbose_name = 'tecrube'
         verbose_name_plural = 'tecrube'
+
 
 class Education(models.Model):
     university_name = models.CharField(max_length=255,verbose_name='uni adi')
@@ -69,6 +73,8 @@ class Interests(models.Model):
         verbose_name = 'maraqlar'
         verbose_name_plural = 'maraqlar'
 
+
+
 class Awards(models.Model):
     name = models.CharField(max_length=255,verbose_name='adi')
     company_name = models.CharField(max_length=255,verbose_name='sert.ver. comp')
@@ -81,6 +87,8 @@ class Awards(models.Model):
 
         verbose_name = 'sertifikatlar'
         verbose_name_plural = 'sertifikatlar'
+
+        
 
 class SosialMedia(models.Model):
     sosial_name = models.CharField(max_length=255,verbose_name='sosial media hesabi',choices=SOCIAL_CHOICES)
